@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+// on shop page in collection overview button needs to regain hover value i.e. should have display none prior to hover
+
 const buttonStyles = css`
   background-color: black;
   color: white;
@@ -16,11 +18,13 @@ const invertedButtonStyles = css`
   background-color: white;
   color: black;
   border: 1px solid black;
+  opacity: 0.7;
 
   &:hover {
     background-color: black;
     color: white;
     border: none;
+    opacity: 0.85;
   }
 `;
 
@@ -57,6 +61,8 @@ export const CustomButtonContainer = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
+  position: absolute;
+  margin-top: 70%;
 
-  ${getButtonStyles}
+  ${getButtonStyles};
 `;
