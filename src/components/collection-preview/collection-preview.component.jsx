@@ -9,7 +9,7 @@ import CollectionItem from '../collection-item/collection-item.component';
 const CollectionPreview = ({ title, items, match, location, history }) => (
   <div className='collection-preview'>
     <TitleContainer
-      onClick={() => history.push(`${match.url}/${title.toLowerCase()}`)}
+      onClick={() => history.push(`${match.path}/${title.toLowerCase()}`)}
     >
       {title.toUpperCase()}
     </TitleContainer>
