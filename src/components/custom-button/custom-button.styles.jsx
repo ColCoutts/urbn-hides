@@ -61,8 +61,7 @@ export const CustomButtonContainer = styled.button`
   cursor: pointer;
   display: flex;
   justify-content: center;
-  position: absolute;
-  margin-top: 70%;
+  margin-top: 20px;
 
   ${getButtonStyles};
 `;
