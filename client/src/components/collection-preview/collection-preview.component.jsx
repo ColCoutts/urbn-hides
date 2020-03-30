@@ -2,25 +2,29 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 import './collection-preview.styles.scss';
-import TitleContainer from './collection-preview.styles';
+import {
+  TitleContainer,
+  CollectionPreviewContainer,
+  PreviewContainer
+} from './collection-preview.styles';
 
 import CollectionItem from '../collection-item/collection-item.component';
 
 const CollectionPreview = ({ title, items, match, location, history }) => (
-  <div className='collection-preview'>
+  <CollectionPreviewContainer>
     <TitleContainer
       onClick={() => history.push(`${match.path}/${title.toLowerCase()}`)}
     >
       {title.toUpperCase()}
     </TitleContainer>
-    <div className='preview'>
+    <PreviewContainer>
       {items
         .filter((item, index) => index < 4)
         .map(item => (
           <CollectionItem key={item.id} item={item} />
         ))}
-    </div>
-  </div>
+    </PreviewContainer>
+  </CollectionPreviewContainer>
 );
 
 export default withRouter(CollectionPreview);
